@@ -20,7 +20,7 @@ $ msr-cli --device-vendor-id 0x03f0 --device-product-id 0x2724
 From python:
 
 ```python
-from msr-cli import MsrCli
+from msr_cli import MsrCli
 
 msr = MsrCli(device_vendor_id=0x03f0, device_product_id=0x2724)
 msr.load_device_endpoint()
