@@ -7,7 +7,6 @@ data.
 
 ```
 pip3 install -U git+https://github.com/kalmanolah/msr-cli.git
-
 ```
 
 ## Usage
