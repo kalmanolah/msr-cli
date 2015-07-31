@@ -154,10 +154,11 @@ def main():
 
     while True:
         try:
+            print('debug')
             data = msr.read_data()
 
             if data:
-                print(json.dumps(data))
+                print(json.dumps(data), flush=True)
         except KeyboardInterrupt:
             break
 
