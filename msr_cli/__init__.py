@@ -154,7 +154,6 @@ def main():
 
     while True:
         try:
-            print('debug')
             data = msr.read_data()
 
             if data:
