@@ -4,6 +4,7 @@ import argparse
 import json
 import usb.core
 import usb.util
+# import sys
 
 
 logger = logging.getLogger(__name__)
@@ -55,6 +56,10 @@ class MsrCli:
         swiped = False
 
         while True:
+            if not usb.core.find(idVendor=self.device_vendor_id, idProduct=self.device_product_id):
+                raise usb.core.USBError('USB device disconnected')
+                # sys.exit('Device disconnected!')
+
             try:
                 if swiped:
                     return self.process_data(data)
